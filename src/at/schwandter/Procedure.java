@@ -1,22 +1,19 @@
 package at.schwandter;
 
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 
 /**
  * Created by stefan on 21.06.16.
  */
-
-
+@Transactional
 public class Procedure {
 
     @Inject
-    private DAO dao;
-
-    @Inject
-    private ProcedureImpl procedure;
+    DAO dao;
 
     public void execute() {
-        procedure.execute();
+        System.out.println("Executing");
+        dao.sayDao();
     }
-
 }

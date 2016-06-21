@@ -18,11 +18,11 @@ import javax.inject.Inject;
 public class Startup {
 
     @Inject
-    Procedure procedure;
+    ProcedureRunner procedureRunner;
 
     @PostConstruct
     private void init() {
-        procedure.execute();
+        procedureRunner.execute();
     }
 
 }
